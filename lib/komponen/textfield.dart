@@ -14,8 +14,9 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         obscureText: obsecureText,
         decoration: InputDecoration(
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Color.fromARGB(255, 123, 123, 123)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Color.fromARGB(255, 123, 123, 123)),
+            borderRadius: BorderRadius.circular(20),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: const Color.fromARGB(255, 69, 69, 69)),

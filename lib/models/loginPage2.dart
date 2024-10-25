@@ -6,23 +6,33 @@ class Loginpage2 extends StatelessWidget{
   Loginpage2 ({super.key});
 
   // text editing controller
-  final userNameController = TextEditingController();
+   final userNameController = TextEditingController();
   final passwordController = TextEditingController();
 
   // log in user in method
- void logIn(BuildContext context) {
+  void logIn(BuildContext context) {
     String username = userNameController.text;
-    String email = "user@example.com"; 
+    String password = passwordController.text;
 
-    // Mengarahkan ke halaman profil dengan mengirim username dan email
-    Navigator.pushNamed(
-      context,
-      '/profile',
-      arguments: {
-        'username': username,
-        'email': email,
-      },
-    );
+    if (username.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please enter both username/email and password'),
+          backgroundColor: Colors.red, 
+        ),
+      );
+    } else {
+      String email = "user@example.com"; 
+
+      Navigator.pushNamed(
+        context,
+        '/profile',
+        arguments: {
+          'username': username,
+          'email': email,
+        },
+      );
+    }
   }
 
 
