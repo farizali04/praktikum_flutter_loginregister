@@ -32,6 +32,17 @@ class ProfilePage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
+              // menampilkan teks Welcome
+              Text(
+                "Welcome Back",
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 20),
               // Menampilkan nama pengguna
               Text(
                 username, // Username dari argumen
@@ -45,7 +56,7 @@ class ProfilePage extends StatelessWidget {
 
               // Menampilkan email pengguna
               Text(
-                email, // Email dari argumen
+                email, 
                 style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 16,

@@ -12,9 +12,9 @@ class Loginpage2 extends StatelessWidget{
   // log in user in method
  void logIn(BuildContext context) {
     String username = userNameController.text;
-    String email = "user@example.com"; // Untuk saat ini email bisa dihardcode atau disesuaikan.
+    String email = "user@example.com"; 
 
-    // Arahkan ke halaman profil dengan mengirim username dan email
+    // Mengarahkan ke halaman profil dengan mengirim username dan email
     Navigator.pushNamed(
       context,
       '/profile',
