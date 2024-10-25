@@ -20,6 +20,7 @@ class CustomTextField extends StatelessWidget {
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: const Color.fromARGB(255, 69, 69, 69)),
+            borderRadius: BorderRadius.circular(20)
           ),
           fillColor: Colors.grey.shade200,
           filled: true,
